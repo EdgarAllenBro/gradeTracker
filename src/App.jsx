@@ -1,12 +1,21 @@
 import { useState } from 'react'
 import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Login from './components/Login.jsx'
+import Students from './components/Students.jsx'
+
+
 
 function App() {
-const [outOf,setOutOf] = useState(0)
+
+
   return (
-    <>
-      <h1>Hello Laurel</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/students' element={<Students/>}></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
