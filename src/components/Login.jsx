@@ -12,7 +12,11 @@ const submitLogin = (e)=>{
         username:username,
         password:password
     }).then((res)=>{
-        console.log(res.data)
+        if(res.data.teacherId){
+            alert('logged in')
+        }else{
+            alert(res.data)
+        }
     })
 }
 
